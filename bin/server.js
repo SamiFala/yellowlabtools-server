@@ -4,10 +4,15 @@ var server                  = require('http').createServer(app);
 var bodyParser              = require('body-parser');
 var compress                = require('compression');
 var cors                    = require('cors');
+const v8                    = require('v8');
 
 var authMiddleware          = require('../lib/middlewares/authMiddleware');
 var apiLimitsMiddleware     = require('../lib/middlewares/apiLimitsMiddleware');
 var wwwRedirectMiddleware   = require('../lib/middlewares/wwwRedirectMiddleware');
+
+
+// Increase heap size
+v8.setFlagsFromString('--max_old_space_size=8192');
 
 
 // Middlewares

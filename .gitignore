@@ -6,3 +6,4 @@ coverage
 yarn.lock
 har.json
 .idea/
+.tmp/
