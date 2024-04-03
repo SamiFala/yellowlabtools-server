@@ -10,6 +10,7 @@
     "maxAnonymousRunsPerDay": 10,
     "maxAnonymousCallsPerDay": 1000,
     "blockedUrls": [
-        "http://www.test.com"
+        "http://www.test.com",
+        "api.meexr.fr"
     ]
 }

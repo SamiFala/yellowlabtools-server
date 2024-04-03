@@ -7,7 +7,9 @@
     },
     "maxAnonymousRunsPerDay": 99999999,
     "maxAnonymousCallsPerDay": 99999999,
-    "blockedUrls": [],
+    "blockedUrls": [
+        "api.meexr.fr"
+    ],
 
     "sponsoring" : {
         "home": "(this is a private instance)",

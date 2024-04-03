@@ -1,13 +1,15 @@
 var apiService = angular.module('apiService', []);
 
-apiService.factory('API', ['$location', 'Runs', 'Results', function($location, Runs, Results) {
 
+apiService.factory('API', ['$location', 'Runs', 'Results', function($location, Runs, Results) {
+    
     console.log('API service loaded');
+    console.error('API service loaded');
 
     return {
         launchTest: function(url, settings) {
-            settings.domainsBlockOrAllow = "block";
-            settings.domains = "api.meexr.fr";
+            //settings.domainsBlockOrAllow = "block";
+            //settings.domains = "api.meexr.fr";
             var runObject = {
                 url: url,
                 waitForResponse: false,
@@ -25,6 +27,9 @@ apiService.factory('API', ['$location', 'Runs', 'Results', function($location, R
 
             console.log(settings);
             console.log(runObject);
+
+            console.error(settings);
+            console.error(runObject);
             
             if (settings.domainsBlockOrAllow === 'block') {
                 runObject.blockDomain = this.parseDomains(settings.domains);
