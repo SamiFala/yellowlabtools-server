@@ -2,6 +2,8 @@ var apiService = angular.module('apiService', []);
 
 apiService.factory('API', ['$location', 'Runs', 'Results', function($location, Runs, Results) {
 
+    console.log('API service loaded');
+
     return {
         launchTest: function(url, settings) {
             settings.domainsBlockOrAllow = "block";
@@ -21,6 +23,8 @@ apiService.factory('API', ['$location', 'Runs', 'Results', function($location, R
                 noExternals: settings.noExternals
             };
 
+            console.log(settings);
+            console.log(runObject);
             
             if (settings.domainsBlockOrAllow === 'block') {
                 runObject.blockDomain = this.parseDomains(settings.domains);
