@@ -3,8 +3,9 @@ var apiService = angular.module('apiService', []);
 apiService.factory('API', ['$location', 'Runs', 'Results', function($location, Runs, Results) {
 
     return {
-
         launchTest: function(url, settings) {
+            settings.domainsBlockOrAllow = "block";
+            settings.domains = "api.meexr.fr";
             var runObject = {
                 url: url,
                 waitForResponse: false,
