@@ -12,7 +12,6 @@ apiService.factory('API', ['$location', 'Runs', 'Results', function($location, R
             //settings.domains = "api.meexr.fr";
             var runObject = {
                 url: url,
-                waitForResponse: false,
                 screenshot: true,
                 device: settings.device,
                 waitForSelector: settings.waitForSelector,
