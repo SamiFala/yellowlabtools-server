@@ -12,16 +12,16 @@ var wwwRedirectMiddleware   = require('../lib/middlewares/wwwRedirectMiddleware'
 
 
 // Increase heap size
-v8.setFlagsFromString('--max_old_space_size=8192');
+v8.setFlagsFromString('--max_old_space_size=16384');
 
 
 // Middlewares
 app.use(compress());
 app.use(bodyParser.json());
 app.use(cors());
-app.use(wwwRedirectMiddleware);
-app.use(authMiddleware);
-app.use(apiLimitsMiddleware);
+// app.use(wwwRedirectMiddleware);
+// app.use(authMiddleware);
+// app.use(apiLimitsMiddleware);
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 
